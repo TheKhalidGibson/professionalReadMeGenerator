@@ -10,6 +10,16 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
         message: "Write a detailed description of your project",
       },
       {
+        type: 'input',
+        name: 'installation',
+        message: "What are the steps to install your project? Please provide step by step instructions",
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: "Provide instructions and examples for use. Include screenshots as needed",
+      },
+      {
         type: 'list',
         name: 'liscense',
         message: 'What kind of liscense do you need?',
