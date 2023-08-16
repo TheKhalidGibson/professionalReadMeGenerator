@@ -12,7 +12,7 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
       {
         type: 'input',
         name: 'tableofcontents',
-        message: 'Enter the links to the table of contents. Make sure to put the section heading in square brakets and link each section with a hashtag and heading surround by parenthesis',
+        message: 'Enter the links to the table of contents. Make sure to put the section heading in square brakets [heading] and link each section with a hashtag and heading inside parenthesis (#heading) or an external link (url) inside parenthesis',
         // choices: ['description', 'tableofcontents', 'installation', 'usage', 'liscense', 'contributing','tests', 'questions'],
       },    
       {
