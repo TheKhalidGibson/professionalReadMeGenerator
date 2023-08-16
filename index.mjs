@@ -49,12 +49,13 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
 
     ])
 
-    let readmeText = `# Project Description
+    let readmeText = 
+`# Project Description
 ${description}
 
 
 ## Table of Contents
-${navigateToc(tableofcontents)}
+${tableofcontents}
 
 
 ## Installation
@@ -85,7 +86,7 @@ ${tests}
 
 ${questions}
 
-### A third-level heading
+
 
 `
 
