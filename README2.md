@@ -25,5 +25,15 @@ SO THAT developers can quickly check off this important step and focus more on t
 GIVEN a command-line application that works through user input
 WHEN I am prompted with criteria qualifiers for my application repository
 THEN a high-quality, professional README.md is generated
-WHEN I am presented with those qualifiers in the prompt my README will then include sections for Description, Table of Contents, Installation, Usage, Liscence
+WHEN I am presented with those qualifiers in the prompt my README will then include sections for Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I enter details into the other sections
+THEN those sections will display my input and selections as well
+WHEN making a selection for the License since this is a list prompt type
+I WILL THEN make a choice between a few licenses
+THEN based upon the option I have chosen a badge is added that correlates with my selection
+WHEN I reach the final prompt
+THEN I will provide a preferred method of communication for the purpose of answering any possible questions
+THEN once all prompts have been responded to a professional README.md will be generated and appear in my file explorer
 ```
