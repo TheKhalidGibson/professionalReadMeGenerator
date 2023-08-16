@@ -10,10 +10,10 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
         message: "Write a detailed description of your project",
       },
       {
-        type: 'list',
+        type: 'input',
         name: 'tableofcontents',
-        message: 'What section of the README would you like to be directed to?',
-        choices: ['#description', '#tableofcontents', '#installation', '#usage', '#liscense', '#contributing','#tests', '#questions'],
+        message: 'Enter the links to the table of contents. Make sure to put the section heading in square brakets and link each section with a hashtag and heading surround by parenthesis',
+        // choices: ['description', 'tableofcontents', 'installation', 'usage', 'liscense', 'contributing','tests', 'questions'],
       },    
       {
         type: 'input',
@@ -50,45 +50,44 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
     ])
 
     let readmeText = `# Project Description
-                      ${description}
+${description}
 
 
-                      ## A second-level heading
-                      ${tableofcontents}
+## Table of Contents
+${navigateToc(tableofcontents)}
 
 
-                      ## A second-level heading
-                      ${installation}
+## Installation
+${installation}
                       
                       
-                      ## A second-level heading
-                      ${usage}
+## Usage
+${usage}
 
 
-                      ## A second-level heading
+## Liscense
 
-                      ${generateLiscense(liscense)}
+${generateLiscense(liscense)}
                       
                       
-                      ## A second-level heading
+## Contributing
 
-                      ${contributing}
+${contributing}
                       
                       
-                      ## A second-level heading
+## Tests
 
                       
-                      ${tests}
+${tests}
                       
                       
-                      ## A second-level heading
+## Questions
 
-                      ${questions}
+${questions}
 
-                      ### A third-level heading
-                      
-                      
-                      `
+### A third-level heading
+
+`
 
 
     fs.writeFile("README.md", readmeText)
@@ -106,11 +105,40 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
         return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
 
       }
-      else(liscense === "BSD"){ 
+      else if(liscense === "BSD"){
 
         return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
 
       }
 
-         return``
+        //  return``
     }
+
+    // function navigateToc(tableofcontents) {
+    //   if (tableofcontents === "description") {
+
+    //     return [description](description)
+
+    //   }
+    //   else if (tableofcontents === "tableofcontents") {
+        
+    //   }
+    //   else if (tableofcontents === "installation") {
+        
+    //   }
+    //   else if (tableofcontents === "usage") {
+        
+    //   }
+    //   else if (tableofcontents === "license") {
+        
+    //   }
+    //   else if (tableofcontents === "contributing") {
+        
+    //   }
+    //   else if (tableofcontents === "tests") {
+        
+    //   }
+    //   else if (tableofcontents === "questions") {
+        
+    //   }
+    // }
