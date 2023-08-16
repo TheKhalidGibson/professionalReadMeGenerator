@@ -1,5 +1,5 @@
 # Project Description
-Profession Readme Generator
+Professional Readme Project
 
 
 ## Table of Contents
@@ -7,11 +7,11 @@ Profession Readme Generator
 
 
 ## Installation
-steps
+easy steps
                       
                       
 ## Usage
-instructions ans use. No screenshot
+fill out necessary parts
 
 
 ## Liscense
@@ -21,13 +21,13 @@ instructions ans use. No screenshot
                       
 ## Contributing
 
-Yes anyone can contribute
+Yes. anyone can contribute
                       
                       
 ## Tests
 
                       
-No, but feel free to run test
+No required test only optional
                       
                       
 ## Questions
