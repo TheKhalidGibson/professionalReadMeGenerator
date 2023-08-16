@@ -115,31 +115,50 @@ ${questions}
         //  return``
     }
 
+
+    //The below is code for if the table of contents were to be a list instead of just hyperlinks
+    //Would need to change the prompt type to a list instead of input and provide choices
+    //Maybe add an event listener? 
+
     // function navigateToc(tableofcontents) {
     //   if (tableofcontents === "description") {
 
-    //     return [description](description)
+    //     return [description](#description)
 
     //   }
     //   else if (tableofcontents === "tableofcontents") {
+
+          //  return [tableofcontents](#tableofcontents)
         
     //   }
     //   else if (tableofcontents === "installation") {
-        
+      
+          //  return [installation](#installation)
+
     //   }
     //   else if (tableofcontents === "usage") {
+
+        //  return [usage](#usage)
         
     //   }
     //   else if (tableofcontents === "license") {
+
+         //  return [liscense](#liscense)
         
     //   }
     //   else if (tableofcontents === "contributing") {
+
+         //  return [contributing](#contributing)
         
     //   }
     //   else if (tableofcontents === "tests") {
+
+         //  return [tests](#tests)
         
     //   }
     //   else if (tableofcontents === "questions") {
         
+        //  return [questions](#questions)
+
     //   }
     // }
