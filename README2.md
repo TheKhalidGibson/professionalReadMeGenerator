@@ -37,3 +37,26 @@ WHEN I reach the final prompt
 THEN I will provide a preferred method of communication for the purpose of answering any possible questions
 THEN once all prompts have been responded to a professional README.md will be generated and appear in my file explorer
 ```
+
+## Getting Started
+
+These are some of the guidelines that helped me get started:
+
+* I created a `.gitignore` file and included `node_modules/` and `.DS_Store/`. This was so that my `node_modules/` directory was not tracked and did not show up in my repository. The `.gitignore` file was created before I installed any npm dependencies.
+
+* I made certain that my repo included a `package.json` with the required dependencies. I used `npm init` to do so.
+
+* I included a video as well to walk through the applications functions since it does not run in the browser this demonstration will help the user visualize its use.
+
+* I included screenshots as well just incase additional visual aid would help conceptualize its purpose.
+
+## Screenshots
+
+![Alt text](./assets/image.png)
+
+![Alt text](./assets/image-1.png)
+
+![Alt text](./assets/image-2.png)
+
+![Alt text](./assets/image-3.png)
+

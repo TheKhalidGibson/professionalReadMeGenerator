@@ -2,7 +2,7 @@ import inquirer from "inquirer";
 import fs from "fs/promises";
 
 
-let {description, tableofcontents, installation, usage, liscense, contributing, tests, questions} = await inquirer
+let {description, tableofcontents, installation, usage, license, contributing, tests, questions} = await inquirer
     .prompt([
       {
         type: 'input',
@@ -12,8 +12,8 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
       {
         type: 'input',
         name: 'tableofcontents',
-        message: 'Enter the links to the table of contents. Make sure to put the section heading in square brakets [heading] and link each section with a hashtag and heading inside parenthesis (#heading) or an external link (url) inside parenthesis',
-        // choices: ['description', 'tableofcontents', 'installation', 'usage', 'liscense', 'contributing','tests', 'questions'],
+        message: 'Enter the links to the table of contents. Make sure to put the section heading in square brackets [heading] and link each section with a hashtag and heading inside parenthesis (#heading) or an external link (url) inside parenthesis',
+        // choices: ['description', 'tableofcontents', 'installation', 'usage', 'license', 'contributing','tests', 'questions'],
       },    
       {
         type: 'input',
@@ -27,8 +27,8 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
       },
       {
         type: 'list',
-        name: 'liscense',
-        message: 'What kind of liscense do you need?',
+        name: 'license',
+        message: 'What kind of license do you need?',
         choices: ['Apache', 'Boost', 'BSD'],
       },
       {
@@ -66,9 +66,9 @@ ${installation}
 ${usage}
 
 
-## Liscense
+## License
 
-${generateLiscense(liscense)}
+${generateLicense(license)}
                       
                       
 ## Contributing
@@ -94,19 +94,19 @@ ${questions}
     fs.writeFile("README.md", readmeText)
     console.log(description);
 
-    function generateLiscense(liscense){
+    function generateLicense(license){
 
-      if(liscense === "Apache"){
+      if(lisense === "Apache"){
 
         return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
 
       }
-      else if(liscense === "Boost"){
+      else if(license === "Boost"){
 
         return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
 
       }
-      else if(liscense === "BSD"){
+      else if(license === "BSD"){
 
         return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
 
@@ -143,7 +143,7 @@ ${questions}
     //   }
     //   else if (tableofcontents === "license") {
 
-         //  return [liscense](#liscense)
+         //  return [license](#license)
         
     //   }
     //   else if (tableofcontents === "contributing") {
