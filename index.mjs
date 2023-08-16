@@ -10,6 +10,12 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
         message: "Write a detailed description of your project",
       },
       {
+        type: 'list',
+        name: 'tableofcontents',
+        message: 'What section of the README would you like to be directed to?',
+        choices: ['#description', '#tableofcontents', '#installation', '#usage', '#liscense', '#contributing','#tests', '#questions'],
+      },    
+      {
         type: 'input',
         name: 'installation',
         message: "What are the steps to install your project? Please provide step by step instructions",
@@ -24,11 +30,22 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
         name: 'liscense',
         message: 'What kind of liscense do you need?',
         choices: ['Apache', 'Boost', 'BSD'],
-        filter(val) {
-          return val.toLowerCase();
-        },
       },
-      
+      {
+        type: 'input',
+        name: 'contributing',
+        message: 'Can anyone add a contribution to your code? Via pull requests? Please provide guidelines for user contributions',
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Will the there be an required tests? If not is it possible to go above and beyond to write tests? If so provide examples on how to run them here?',
+      },
+      {
+        type: 'input',
+        name: 'questions',
+        message: 'Please provide the user with a method of preferred method of communication to use for any questions they may have.',
+      },      
 
     ])
 
@@ -55,18 +72,18 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
                       
                       ## A second-level heading
 
-                      ${generateLiscense(contributing)}
+                      ${contributing}
                       
                       
                       ## A second-level heading
 
                       
-                      ${generateLiscense(tests)}
+                      ${tests}
                       
                       
                       ## A second-level heading
 
-                      ${generateLiscense(questions)}
+                      ${questions}
 
                       ### A third-level heading
                       
@@ -95,5 +112,5 @@ let {description, tableofcontents, installation, usage, liscense, contributing, 
 
       }
 
-          return``
+         return``
     }
